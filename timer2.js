@@ -12,9 +12,9 @@ const interactiveTimer = function () {
 const handleUserInput = function (timer) {
   let numTimer = Number(timer);
   if (timer === '\u0003') {
-    console.log('Thanks for using me, ciao!')
+    console.log('Thanks for using me, ciao!');
     process.exit();
-  } else if (numTimer < 0) {
+  } else if ((numTimer < 0) || (timer === '-')) {
     console.log("Time travel is not yet possible. A positive number is needed.");
   } else if (Number.isNaN(numTimer)) {
     (timer === 'b') ? process.stdout.write('\x07') : console.log("Time is a quantifiable object. Hence, a number must be provided.");
